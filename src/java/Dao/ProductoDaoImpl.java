@@ -154,6 +154,7 @@ public class ProductoDaoImpl implements IProducto {
                 pr.setDescripcion(rs.getString("descripcion"));
                 pr.setPrecio(rs.getDouble("precio"));
                 pr.setStock(rs.getInt("stock"));
+                pr.setImagen(rs.getString("imagen"));
             }
 
         } catch (Exception e) {
