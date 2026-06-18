@@ -35,12 +35,19 @@ async function init() {
         //cargar los script y funciones
         await loadScript('assets/js/tienda.js');
         setTimeout(() => {
+            if (typeof verificarSesion() === 'function')
+                verificarSesion();
             if (typeof cargarProductos() === 'function')
                 cargarProductos();
+            if (typeof inicializarEventosAuth() === 'function')
+                inicializarEventosAuth();
             if (typeof agregarCarrito() === 'function')
                 agregarCarrito();
             if (typeof actualizarContadorCarrito() === 'function')
                 actualizarContadorCarrito();
+            if (typeof cargarCarrito() === 'function')
+                cargarCarrito();
+            
 
         }, 200)
 

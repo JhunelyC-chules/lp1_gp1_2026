@@ -77,12 +77,12 @@ public class AuthController extends HttpServlet {
                     HttpSession session = request.getSession(true);
 
                     session.setAttribute("usuario", us);
-                    jsonResponse.addProperty("sucess", true);
+                    jsonResponse.addProperty("success", true);
                     jsonResponse.addProperty("message", "Inicio de Sesion");
 
                     jsonResponse.add("userData", gson.toJsonTree(us));
                 } else {
-                    jsonResponse.addProperty("sucess", false);
+                    jsonResponse.addProperty("success", false);
                     jsonResponse.addProperty("message", "Usuario o contraseña invalida");
                 }
                 out.print(jsonResponse.toString());
@@ -92,7 +92,7 @@ public class AuthController extends HttpServlet {
                 if (session != null) {
                     session.invalidate();
                 }
-                jsonResponse.addProperty("sucess", true);
+                jsonResponse.addProperty("success", true);
                 jsonResponse.addProperty("message", "Sesion cerrada");
                 out.print(jsonResponse.toString());
                 
