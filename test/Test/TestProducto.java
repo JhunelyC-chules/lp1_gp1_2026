@@ -20,7 +20,7 @@ public class TestProducto {
     public static void main(String[] args) {
           TestProducto t = new TestProducto();
          // t.listar();
-          //t.insertar();
+          t.insertar();
         //  t.update();
        // t.updateStock();
         //t.SearchById();

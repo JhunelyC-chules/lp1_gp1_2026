@@ -22,14 +22,14 @@ public class TestPersona {
 
     public static void main(String[] args) {
         TestPersona t = new TestPersona();
-      //  t.crear_usuario();
+//        t.crear_usuario();
        t.validate();
     }
 
     public void crear_usuario() {
         Persona p = new Persona();
-        p.setNombre("Jhan Arly");
-        p.setEmail("jhan1@gmail.com");
+        p.setNombre("ana");
+        p.setEmail("anav@gmail.com");
         p.setDireccion("upeu");
         p.setTelefono("987654321");
         Usuario u = new Usuario();
@@ -44,7 +44,7 @@ public class TestPersona {
     }
     
     public void validate(){
-        Usuario u =Udao.validate("jhan@gmail.com", "admin123");
+        Usuario u =Udao.validate("anav@gmail.com", "admin123");
         if (u !=null && u.getPersona() !=null) {
             System.out.println("Bienvenido"+u.getPersona().getNombre());
             System.out.println("Rol"+ u.getRol());
