@@ -47,6 +47,8 @@ async function init() {
                 actualizarContadorCarrito();
             if (typeof cargarCarrito() === 'function')
                 cargarCarrito();
+            if (typeof  cargarTablaAdmin()=== 'fuction')
+                cargarTablaAdmin();
             
 
         }, 200)
